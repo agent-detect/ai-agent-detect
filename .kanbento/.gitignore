@@ -1,0 +1,5 @@
+# kanbento — generated state, regenerated on demand
+views/
+runs/
+*.tmp
+last-engineered-context.txt

@@ -1,0 +1,66 @@
+{
+  "manifestVersion": "1.0",
+  "board": {
+    "id": "ai-agent-detect",
+    "name": "ai-agent-detect",
+    "revision": 1,
+    "maturity": "standard"
+  },
+  "inbox": {
+    "sources": [
+      "human",
+      "agent",
+      "request",
+      "feedback"
+    ],
+    "landing": "backlog"
+  },
+  "stages": [
+    {
+      "id": "backlog",
+      "role": "options"
+    },
+    {
+      "id": "selected",
+      "role": "commit"
+    },
+    {
+      "id": "in_progress",
+      "role": "active"
+    },
+    {
+      "id": "done",
+      "role": "done"
+    }
+  ],
+  "policies": {
+    "joining": "A worker announces its capability profile on arrival."
+  },
+  "cardSchema": {
+    "core": [
+      "id",
+      "title",
+      "state",
+      "createdAt",
+      "updatedAt"
+    ],
+    "types": "open"
+  },
+  "types": [
+    {
+      "id": "harness",
+      "flow": false,
+      "embodiment": "file",
+      "path": ".kanbento/harnesses/{slug}.md",
+      "status": {
+        "field": "status",
+        "values": {
+          "documented": "facts from vendor docs / third-party registries only \u2014 unverified claims",
+          "probed": "verified by a live sentinel probe \u2014 env snapshot recorded, probe date stamped",
+          "stale": "probe predates a known change (version bump, convention shift) \u2014 re-probe due",
+          "retired": "harness discontinued or absorbed \u2014 kept for the historical record"
+        }
+      }
+    }
+  ]
+}

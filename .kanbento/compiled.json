@@ -1,0 +1,43 @@
+{
+  "boardId": "ai-agent-detect",
+  "revision": 1,
+  "wipEnforcement": "advisory",
+  "stages": [
+    {
+      "id": "backlog",
+      "role": "options",
+      "order": 0,
+      "wip": null,
+      "gate": null
+    },
+    {
+      "id": "selected",
+      "role": "commit",
+      "order": 1,
+      "wip": null,
+      "gate": null
+    },
+    {
+      "id": "in_progress",
+      "role": "active",
+      "order": 2,
+      "wip": null,
+      "gate": null
+    },
+    {
+      "id": "done",
+      "role": "done",
+      "order": 3,
+      "wip": null,
+      "gate": null
+    }
+  ],
+  "flows": [],
+  "types": [
+    "harness"
+  ],
+  "lanes": [],
+  "classes": [],
+  "relations": [],
+  "toolVersion": "0.2.0"
+}

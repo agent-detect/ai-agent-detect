@@ -1,0 +1,51 @@
+{
+  "agent": "grok",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "live: agent -p child env (grok 0.2.45, macOS), inherited identity vars scrubbed — grok sets no identity var, only a non-interactive hygiene bundle",
+      "tier": "probed",
+      "env": {
+        "CI": "true",
+        "CLICOLOR": "1",
+        "CLICOLOR_FORCE": "1",
+        "PAGER": "cat",
+        "GIT_PAGER": "cat",
+        "GH_PAGER": "cat",
+        "MANPAGER": "cat",
+        "SYSTEMD_PAGER": "cat",
+        "AWS_PAGER": "",
+        "GIT_TERMINAL_PROMPT": "0",
+        "GIT_SEQUENCE_EDITOR": "true",
+        "NPM_CONFIG_PROGRESS": "true",
+        "PIP_PROGRESS_BAR": "on",
+        "CARGO_TERM_PROGRESS_WHEN": "always",
+        "CARGO_TERM_PROGRESS_WIDTH": "80"
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "method": "live: agent -p spawned INSIDE a Claude Code session, unscrubbed — grok passes inherited AI_AGENT through (nested-harness contamination; env-only detection reports the outer layer by design — detectDeep resolves the stack)",
+      "tier": "probed",
+      "env": {
+        "AI_AGENT": "claude-code_2-1-205_agent",
+        "CI": "true",
+        "CLICOLOR": "1",
+        "PAGER": "cat",
+        "GIT_PAGER": "cat",
+        "GIT_TERMINAL_PROMPT": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "claude-code",
+        "claimNames": ["claude-code"],
+        "note": "honest limitation, not a bug: the inner harness (grok) is env-invisible"
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "agent": "claude-code",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "live: env inside a Claude Code background session (v2.1.205, macOS)",
+      "tier": "probed",
+      "env": {
+        "AI_AGENT": "claude-code_2-1-205_agent",
+        "CLAUDECODE": "1",
+        "CLAUDE_CODE_ENTRYPOINT": "cli",
+        "CLAUDE_CODE_EXECPATH": "/Users/user/.local/share/claude/versions/2.1.205",
+        "CLAUDE_CODE_CHILD_SESSION": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "claude-code",
+        "version": "2.1.205",
+        "mode": "agent",
+        "claimNames": ["claude-code"]
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "method": "synthetic: AI_AGENT stripped — vendor tells only; version recovered from CLAUDE_CODE_EXECPATH",
+      "tier": "synthetic",
+      "env": {
+        "CLAUDECODE": "1",
+        "CLAUDE_CODE_ENTRYPOINT": "cli",
+        "CLAUDE_CODE_EXECPATH": "/Users/user/.local/share/claude/versions/2.1.205"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "claude-code",
+        "version": "2.1.205",
+        "mode": null,
+        "claimNames": ["claude-code"]
+      }
+    }
+  ]
+}
