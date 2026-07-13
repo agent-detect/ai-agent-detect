@@ -1,0 +1,31 @@
+{
+  "agent": "codex",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: codex-rs/core/src/spawn.rs — network sandbox on (any OS)",
+      "tier": "source",
+      "env": {
+        "CODEX_SANDBOX_NETWORK_DISABLED": "1"
+      },
+      "expect": { "isAgent": true, "primary": "codex", "claimNames": ["codex"] }
+    },
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: macOS Seatbelt — both sandbox vars present",
+      "tier": "source",
+      "env": {
+        "CODEX_SANDBOX": "seatbelt",
+        "CODEX_SANDBOX_NETWORK_DISABLED": "1"
+      },
+      "expect": { "isAgent": true, "primary": "codex", "claimNames": ["codex"] }
+    },
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: --sandbox danger-full-access — NO env signal exists (the documented hole; ppid walk is the only rung that catches codex here)",
+      "tier": "source",
+      "env": {},
+      "expect": { "isAgent": false, "primary": null, "claimNames": [] }
+    }
+  ]
+}

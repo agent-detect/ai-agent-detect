@@ -1,0 +1,21 @@
+{
+  "agent": "cowork",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "vercel-rules-derived: detect-agent@1.0.1 agents.json (adopted, not independently verified) \u2014 cowork marker atop claude-code vars; claude-code detector defers (specificity wins)",
+      "tier": "vercel-rules",
+      "env": {
+        "CLAUDE_CODE_IS_COWORK": "1",
+        "CLAUDECODE": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "cowork",
+        "claimNames": [
+          "cowork"
+        ]
+      }
+    }
+  ]
+}

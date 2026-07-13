@@ -1,0 +1,21 @@
+{
+  "agent": "aider",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: aider/llm.py:9-13 \u2014 OpenRouter attribution vars set at import, inherited by every /run child; accidental fingerprint, not identity by intent",
+      "tier": "source",
+      "env": {
+        "OR_SITE_URL": "https://aider.chat",
+        "OR_APP_NAME": "Aider"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "aider",
+        "claimNames": [
+          "aider"
+        ]
+      }
+    }
+  ]
+}

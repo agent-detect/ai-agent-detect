@@ -41,6 +41,13 @@ test('[matrix] every registry entry has a fixture', () => {
   }
 });
 
+test('[matrix] every fixture has a registry entry', () => {
+  const registered = new Set(agents.map((a) => a.name));
+  for (const fixture of fixtures) {
+    assert.ok(registered.has(fixture.agent), `fixture ${fixture.agent} has no registry entry`);
+  }
+});
+
 test('[matrix] empty env detects nothing', () => {
   assert.equal(detect({ env: {} }), null);
   assert.equal(isAgent({ env: {} }), false);

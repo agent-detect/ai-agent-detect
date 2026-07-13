@@ -1,0 +1,52 @@
+{
+  "agent": "github-copilot",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "doc-derived: vendor changelog:1674 \u2014 COPILOT_CLI=1 is the documented subprocess-detection hook, plus session id (changelog:1128)",
+      "tier": "doc",
+      "env": {
+        "COPILOT_CLI": "1",
+        "COPILOT_AGENT_SESSION_ID": "fixture-session"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "github-copilot",
+        "claimNames": [
+          "github-copilot"
+        ]
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "method": "vercel-rules-derived: detect-agent@1.0.1 agents.json (adopted, not independently verified) \u2014 COPILOT_MODEL trio, unverified in vendor changelog; weaker fallback",
+      "tier": "vercel-rules",
+      "env": {
+        "COPILOT_MODEL": "gpt-5"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "github-copilot",
+        "claimNames": [
+          "github-copilot"
+        ]
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "method": "doc-derived: AI_AGENT self-identification (github-copilot-cli dialect via core rung 1)",
+      "tier": "doc",
+      "env": {
+        "AI_AGENT": "github-copilot-cli"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "github-copilot-cli",
+        "claimNames": [
+          "github-copilot-cli"
+        ],
+        "note": "verbatim rung-1 name; Vercel's scoped pkg normalizes -cli away, we preserve evidence as-is"
+      }
+    }
+  ]
+}

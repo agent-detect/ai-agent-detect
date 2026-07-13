@@ -2,7 +2,7 @@
 
 Detect which AI agent is running your code — structured identity, not just a boolean.
 
-**Status: working prototype.** The code runs (19 tests, 2 live-probed agents); the API may still shift before `0.1.0`.
+**Status: early but real.** 25 agents in the registry, every signal evidence-tiered and fixture-tested (82 tests); the API may still shift before `1.0`.
 
 ```js
 import { detect, isAgent } from 'ai-agent-detect';
@@ -34,12 +34,37 @@ Every claim carries its evidence: `source` (which signal matched), `raw` (the ma
 
 ## Supported agents
 
-| agent | signals | evidence |
-|---|---|---|
-| claude-code | `AI_AGENT` triple, `CLAUDECODE=1`, version via `CLAUDE_CODE_EXECPATH` | live-probed 2026-07-12 |
-| grok | **none** — sets no identity variable (and passes inherited `AI_AGENT` through) | live-probed 2026-07-12 |
+Evidence tiers: **probed** (live env snapshot recorded by us) > **source** (read in the agent's source code) > **doc** (vendor documentation) > **community** (reports) > **vercel-rules** (adopted from detect-agent's rules, not independently verified).
 
-grok's entry is deliberate: an agent that cannot be detected from env is recorded as such — honesty over reach. Any agent that sets `AI_AGENT` or a name-valued `AGENT` is detected without a registry entry.
+| agent | signal | evidence |
+|---|---|---|
+| claude-code | `AI_AGENT` triple, `CLAUDECODE=1`, version via `CLAUDE_CODE_EXECPATH` | probed |
+| grok | **none** — no identity var; passes inherited `AI_AGENT` through | probed |
+| gemini-cli | `GEMINI_CLI=1` (deliberate, documented) | source+doc |
+| qwen-code | `QWEN_CODE=1` + session-id family (fork renamed Gemini's flag) | source |
+| opencode | `OPENCODE=1`, `AGENT=1`, `OPENCODE_PID` | source |
+| kilo | `KILO=1`, `KILO_CLIENT`, **version via `KILOCODE_VERSION`** (+ fork-parent `OPENCODE=1`, `AGENT=1`) | source |
+| codex | sandbox side effects only (`CODEX_SANDBOX*`); **nothing under `danger-full-access`** | source |
+| goose | `AGENT=goose` + `GOOSE_TERMINAL=1` — on two of three execution paths only | source |
+| cline | `CLINE_ACTIVE=true` — VS Code terminals only | source |
+| roo | `ROO_ACTIVE=true` (terminals), `ROO_CLI_RUNTIME=1` (headless) | source |
+| aider | `OR_APP_NAME=Aider` + `OR_SITE_URL` (accidental fingerprint) | source |
+| openhands | sandbox furniture: `OH_*` vars, `PS1` markers | source |
+| crush | **none** — sets no identity variable | source |
+| continue | **none** — sets no identity variable | source |
+| github-copilot | `COPILOT_CLI=1` (documented), `COPILOT_AGENT_SESSION_ID`; `AI_AGENT=github-copilot(-cli)` | doc |
+| amp | `AGENT=amp` (reported, unverified) | community |
+| cursor | `CURSOR_AGENT=1`, `CURSOR_TRACE_ID`, `CURSOR_EXTENSION_HOST_ROLE` | community |
+| antigravity | `ANTIGRAVITY_AGENT` | vercel-rules |
+| augment | `AUGMENT_AGENT` | vercel-rules |
+| cowork | `CLAUDE_CODE_IS_COWORK` atop claude-code vars | vercel-rules |
+| junie | `JUNIE_DATA` / `JUNIE_SHIM_PATH` | vercel-rules |
+| kiro | `TERM_PROGRAM~kiro` (low confidence — ambience, not identity) | vercel-rules |
+| pi | PATH contains `.pi/agent` (low confidence) | vercel-rules |
+| replit | `REPL_ID` (environment marker, not agent-specific) | vercel-rules |
+| devin | file tell only (`/opt/.devin`) — outside the env core, planned for `/node` | vercel-rules |
+
+The no-signal entries (grok, crush, continue; codex under `danger-full-access`) are deliberate: an agent that cannot be detected from env is recorded as such — honesty over reach. Any agent that sets `AI_AGENT` or a name-valued `AGENT` is detected without a registry entry. Coverage caveats (goose's per-path signals, cline's terminal-only marker) live as comments in each detector and in the fixtures.
 
 ## Design
 

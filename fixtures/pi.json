@@ -1,0 +1,20 @@
+{
+  "agent": "pi",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "vercel-rules-derived: detect-agent@1.0.1 agents.json (adopted, not independently verified) \u2014 PATH fingerprint, weak-signal class",
+      "tier": "vercel-rules",
+      "env": {
+        "PATH": "/usr/bin:/home/u/.pi/agent/bin"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "pi",
+        "claimNames": [
+          "pi"
+        ]
+      }
+    }
+  ]
+}

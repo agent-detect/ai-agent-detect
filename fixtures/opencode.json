@@ -1,0 +1,16 @@
+{
+  "agent": "opencode",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: startup middleware (packages/opencode/src/index.ts:75-77) — OPENCODE=1, AGENT=1 (boolean: anonymous claim), OPENCODE_PID",
+      "tier": "source",
+      "env": {
+        "OPENCODE": "1",
+        "AGENT": "1",
+        "OPENCODE_PID": "12345"
+      },
+      "expect": { "isAgent": true, "primary": "opencode", "claimNames": ["opencode"] }
+    }
+  ]
+}

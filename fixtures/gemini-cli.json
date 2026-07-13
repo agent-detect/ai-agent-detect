@@ -1,0 +1,14 @@
+{
+  "agent": "gemini-cli",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "source+doc-derived: shellExecutionService.ts sets GEMINI_CLI=1 on every shell-tool child; documented in docs/tools/shell.md",
+      "tier": "source",
+      "env": {
+        "GEMINI_CLI": "1"
+      },
+      "expect": { "isAgent": true, "primary": "gemini-cli", "claimNames": ["gemini-cli"] }
+    }
+  ]
+}

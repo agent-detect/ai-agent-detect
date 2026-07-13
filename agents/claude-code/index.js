@@ -1,13 +1,13 @@
-// claude-code (Anthropic) — probed 2026-07-12 (see .kanbento/harnesses/claude-code.md).
-// Sets the full AI_AGENT triple (handled by core rung 1); this detector owns
-// the vendor tells, which also work when AI_AGENT is stripped or inherited-over.
+// claude-code — evidence, tiers, and probe TODOs: .kanbento/harnesses/claude-code.md
 export default {
   name: 'claude-code',
   vendor: 'anthropic',
   procNames: ['claude'],
   pidEnvVar: null,
   detect(env) {
-    if (env.CLAUDECODE !== '1') return null;
+    if (env.CLAUDECODE !== '1' && !env.CLAUDE_CODE) return null;
+    // agents/cowork owns the marked case (specificity wins)
+    if (env.CLAUDE_CODE_IS_COWORK) return null;
     const raw = {};
     for (const key of [
       'CLAUDECODE',

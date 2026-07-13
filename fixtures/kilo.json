@@ -1,0 +1,28 @@
+{
+  "agent": "kilo",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: cli/setup.ts:56 + server-manager.ts:113-152 + fork-parent index.ts:111-113 \u2014 the richest emitter surveyed; opencode detector legitimately fires too (kilo IS opencode underneath): the claims model represents it",
+      "tier": "source",
+      "env": {
+        "KILO": "1",
+        "KILO_CLIENT": "vscode",
+        "KILOCODE_FEATURE": "vscode-extension",
+        "KILOCODE_VERSION": "4.99.0",
+        "KILO_PID": "4242",
+        "AGENT": "1",
+        "OPENCODE": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "kilo",
+        "version": "4.99.0",
+        "claimNames": [
+          "kilo",
+          "opencode"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "agent": "cursor",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "community/staff-derived: agent shell command env (forum.cursor.com/t/132427, t/37734) — both tells present",
+      "tier": "community",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "CURSOR_TRACE_ID": "0000-fixture-trace-id"
+      },
+      "expect": { "isAgent": true, "primary": "cursor", "claimNames": ["cursor"] }
+    },
+    {
+      "date": "2026-07-12",
+      "method": "community-derived: trace id only (CURSOR_AGENT=1 was once accidentally dropped by a CLI release — the degraded state)",
+      "tier": "community",
+      "env": {
+        "CURSOR_TRACE_ID": "0000-fixture-trace-id"
+      },
+      "expect": { "isAgent": true, "primary": "cursor", "claimNames": ["cursor"] }
+    }
+  ]
+}

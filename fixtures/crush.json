@@ -1,0 +1,20 @@
+{
+  "agent": "crush",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: full Setenv/cmd.Env sweep of internal/ \u2014 NO self-identity var on shell children; only generic color-forcing on the PTY path. Env-undetectable; upstream ticket candidate (CRUSH=1)",
+      "tier": "source",
+      "env": {
+        "COLORTERM": "truecolor",
+        "CLICOLOR_FORCE": "1",
+        "FORCE_COLOR": "1"
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    }
+  ]
+}

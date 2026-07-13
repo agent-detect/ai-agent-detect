@@ -1,0 +1,22 @@
+{
+  "agent": "goose",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: computer-controller / retry path (goose-mcp computercontroller/mod.rs:855-873) — AGENT=goose + GOOSE_TERMINAL=1, corroborating",
+      "tier": "source",
+      "env": {
+        "AGENT": "goose",
+        "GOOSE_TERMINAL": "1"
+      },
+      "expect": { "isAgent": true, "primary": "goose", "claimNames": ["goose"] }
+    },
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: main developer shell tool sets NEITHER var (shell.rs sets only PATH — source contradicts the docs' blanket claim); goose is env-invisible on its most common path",
+      "tier": "source",
+      "env": {},
+      "expect": { "isAgent": false, "primary": null, "claimNames": [] }
+    }
+  ]
+}

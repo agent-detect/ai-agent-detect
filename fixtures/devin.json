@@ -1,0 +1,16 @@
+{
+  "agent": "devin",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "vercel-rules-derived: detect-agent@1.0.1 agents.json (adopted, not independently verified) \u2014 only tell is file_exists /opt/.devin, a disk check outside the edge-safe env core; devin detection belongs to the /node rung",
+      "tier": "vercel-rules",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    }
+  ]
+}
