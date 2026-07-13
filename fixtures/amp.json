@@ -1,0 +1,14 @@
+{
+  "agent": "amp",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "community-derived: agents.md adoption table (issues/136) lists amp as setting AGENT=amp — not in the official manual, unverified in source; identity arrives via the generic AGENT rung, no vendor detector",
+      "tier": "community",
+      "env": {
+        "AGENT": "amp"
+      },
+      "expect": { "isAgent": true, "primary": "amp", "claimNames": ["amp"] }
+    }
+  ]
+}

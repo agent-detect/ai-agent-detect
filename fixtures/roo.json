@@ -1,0 +1,38 @@
+{
+  "agent": "roo",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: Terminal.ts:153-161 \u2014 ROO_ACTIVE=true on VS Code terminals",
+      "tier": "source",
+      "env": {
+        "ROO_ACTIVE": "true",
+        "PAGER": "cat",
+        "VTE_VERSION": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "roo",
+        "claimNames": [
+          "roo"
+        ]
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: extension-host.ts:182 \u2014 ROO_CLI_RUNTIME=1 process-wide in the headless CLI",
+      "tier": "source",
+      "env": {
+        "ROO_CLI_RUNTIME": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "roo",
+        "mode": "agent",
+        "claimNames": [
+          "roo"
+        ]
+      }
+    }
+  ]
+}

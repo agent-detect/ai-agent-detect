@@ -1,0 +1,23 @@
+{
+  "agent": "openhands",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: docker_sandbox_spec_service.py:38-52 + subprocess_terminal.py:150 \u2014 sandbox container furniture + PS1 markers; environment fingerprint, not identity by intent",
+      "tier": "source",
+      "env": {
+        "OH_CONVERSATIONS_PATH": "/workspace/conversations",
+        "OH_BASH_EVENTS_DIR": "/workspace/bash_events",
+        "OPENVSCODE_SERVER_ROOT": "/openhands/.openvscode-server",
+        "PS1": "###PS1JSON###{}###PS1END###"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "openhands",
+        "claimNames": [
+          "openhands"
+        ]
+      }
+    }
+  ]
+}

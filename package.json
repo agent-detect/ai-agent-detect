@@ -1,0 +1,53 @@
+{
+  "name": "ai-agent-detect",
+  "version": "0.2.0",
+  "description": "Detect which AI agent is running your code \u2014 structured identity (name, version, mode) with evidence, not just a boolean. Reads the AI_AGENT standard (both dialects) and the signals it misses.",
+  "license": "MIT",
+  "author": "George Mihailov",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "cli.js",
+    "agents/",
+    "fixtures/"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "bench": "node bench.js",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "ai-agent",
+    "AI_AGENT",
+    "agent-detection",
+    "harness",
+    "harness-detection",
+    "detection",
+    "isagent",
+    "claude-code",
+    "grok",
+    "codex",
+    "cursor",
+    "gemini-cli",
+    "amp",
+    "goose",
+    "opencode",
+    "agentic"
+  ],
+  "bin": {
+    "ai-agent-detect": "./cli.js"
+  }
+}

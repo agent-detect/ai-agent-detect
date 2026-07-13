@@ -1,0 +1,36 @@
+{
+  "agent": "cline",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: VscodeTerminalRegistry.ts:29 \u2014 CLINE_ACTIVE=true injected on VS Code integrated terminals",
+      "tier": "source",
+      "env": {
+        "CLINE_ACTIVE": "true"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "cline",
+        "claimNames": [
+          "cline"
+        ]
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: standalone/CLI path (StandaloneTerminalProcess.ts:104-116) sets only anti-interactivity overrides, NOT the marker \u2014 the coverage gap",
+      "tier": "source",
+      "env": {
+        "TERM": "xterm-256color",
+        "PAGER": "cat",
+        "GIT_PAGER": "cat",
+        "MANPAGER": "cat"
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    }
+  ]
+}

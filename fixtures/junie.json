@@ -1,0 +1,20 @@
+{
+  "agent": "junie",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "vercel-rules-derived: detect-agent@1.0.1 agents.json (adopted, not independently verified)",
+      "tier": "vercel-rules",
+      "env": {
+        "JUNIE_DATA": "/tmp/junie"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "junie",
+        "claimNames": [
+          "junie"
+        ]
+      }
+    }
+  ]
+}

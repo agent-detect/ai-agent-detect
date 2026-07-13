@@ -1,0 +1,23 @@
+{
+  "agent": "qwen-code",
+  "probes": [
+    {
+      "date": "2026-07-12",
+      "method": "source-derived: shellExecutionService.ts:723 + shellContextEnv.ts:41-55 \u2014 QWEN_CODE=1 with session-id family on every shell child; renamed from Gemini's GEMINI_CLI (fork, zero GEMINI_CLI hits)",
+      "tier": "source",
+      "env": {
+        "QWEN_CODE": "1",
+        "QWEN_CODE_SESSION_ID": "fixture-uuid",
+        "QWEN_CODE_AGENT_ID": "",
+        "QWEN_CODE_PROMPT_ID": ""
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "qwen-code",
+        "claimNames": [
+          "qwen-code"
+        ]
+      }
+    }
+  ]
+}
