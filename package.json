@@ -1,6 +1,6 @@
 {
   "name": "ai-agent-detect",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Detect which AI agent is running your code \u2014 structured identity (name, version, mode) with evidence, not just a boolean. Reads the AI_AGENT standard (both dialects) and the signals it misses.",
   "license": "MIT",
   "author": "George Mihailov",
@@ -19,7 +19,8 @@
     "index.d.ts",
     "cli.js",
     "agents/",
-    "fixtures/"
+    "fixtures/",
+    "docs/"
   ],
   "engines": {
     "node": ">=18"
@@ -49,5 +50,11 @@
   ],
   "bin": {
     "ai-agent-detect": "./cli.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agent-detect/ai-agent-detect.git"
+  },
+  "homepage": "https://github.com/agent-detect/ai-agent-detect#readme",
+  "bugs": "https://github.com/agent-detect/ai-agent-detect/issues"
 }
