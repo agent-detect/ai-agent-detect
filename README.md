@@ -31,7 +31,7 @@ npx ai-agent-detect --format json    # full structured result
 npx ai-agent-detect --snapshot       # redacted env dump — paste into a fixture PR
 ```
 
-**Status: early but real.** 26 agents in the registry, every signal evidence-tiered and fixture-tested; the API may still shift before `1.0`.
+**Status: early but real.** Every registered agent has evidence notes and synthetic fixtures; the API may still shift before `1.0`.
 
 > Not to be confused with server-side "AI agent detection" (classifying AI crawlers in web traffic). This is the inverse, inside-out question: your process asking who launched it.
 
