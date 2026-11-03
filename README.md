@@ -31,7 +31,7 @@ npx ai-agent-detect --format json    # full structured result
 npx ai-agent-detect --snapshot       # redacted env dump — paste into a fixture PR
 ```
 
-**Status: early but real.** 25 agents in the registry, every signal evidence-tiered and fixture-tested; the API may still shift before `1.0`.
+**Status: early but real.** 26 agents in the registry, every signal evidence-tiered and fixture-tested; the API may still shift before `1.0`.
 
 > Not to be confused with server-side "AI agent detection" (classifying AI crawlers in web traffic). This is the inverse, inside-out question: your process asking who launched it.
 
@@ -55,6 +55,7 @@ Evidence tiers: **probed** (live env snapshot recorded by us) > **source** (read
 
 | agent | signal | evidence |
 |---|---|---|
+| workbuddy | execution markers; see [evidence](docs/harnesses/workbuddy.md) | static-distribution |
 | claude-code | `AI_AGENT` triple, `CLAUDECODE=1`, version via `CLAUDE_CODE_EXECPATH` | probed |
 | grok | **none** — no identity var; passes inherited `AI_AGENT` through | probed |
 | gemini-cli | `GEMINI_CLI=1` (deliberate, documented) | source+doc |
