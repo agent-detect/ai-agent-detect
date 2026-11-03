@@ -1,3 +1,4 @@
+import lingguang from './lingguang/index.js';
 // One agent = one folder = one easy PR. Keep alphabetical.
 import aider from './aider/index.js';
 import amp from './amp/index.js';
@@ -51,4 +52,5 @@ export const agents = [
   qwenCode,
   replit,
   roo,
+  lingguang,
 ];
