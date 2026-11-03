@@ -1,0 +1,319 @@
+{
+  "agent": "instinct",
+  "probes": [
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 0",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_ID": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 1",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_ID": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 2",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_ID": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 3",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_ID": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 4",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_STARTED_AT": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 5",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_STARTED_AT": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 6",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_STARTED_AT": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 7",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_STARTED_AT": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 8",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_TIMEOUT_SECONDS": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 9",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_TIMEOUT_SECONDS": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 10",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_TIMEOUT_SECONDS": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 11",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_TIMEOUT_SECONDS": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "instinct",
+        "claimNames": [
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 12",
+      "tier": "reported-shell",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 13",
+      "tier": "reported-shell",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 14",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_ID": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 15",
+      "tier": "reported-shell",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 16",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_STARTED_AT": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 17",
+      "tier": "reported-shell",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 18",
+      "tier": "reported-shell",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_TIMEOUT_SECONDS": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: native claim retained before inherited instinct host",
+      "tier": "synthetic",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_ID": "1",
+        "CLAUDECODE": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "claude-code",
+        "claimNames": [
+          "claude-code",
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: native claim retained before inherited instinct host",
+      "tier": "synthetic",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_ID": "1",
+        "GEMINI_CLI": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "gemini-cli",
+        "claimNames": [
+          "gemini-cli",
+          "instinct"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: native claim retained before inherited instinct host",
+      "tier": "synthetic",
+      "env": {
+        "INSTINCT_OUTER_TOOL_USE_ID": "1",
+        "CODEX_SANDBOX_NETWORK_DISABLED": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "codex",
+        "claimNames": [
+          "codex",
+          "instinct"
+        ]
+      }
+    }
+  ]
+}
