@@ -67,7 +67,7 @@ Evidence tiers: **probed** (live env snapshot recorded by us) > **source** (read
 | roo | `ROO_ACTIVE=true` (terminals), `ROO_CLI_RUNTIME=1` (headless) | source |
 | aider | `OR_APP_NAME=Aider` + `OR_SITE_URL` (accidental fingerprint) | source |
 | openhands | sandbox furniture: `OH_*` vars, `PS1` markers | source |
-| crush | **none** — sets no identity variable | source |
+| crush | execution markers; see [evidence](docs/harnesses/crush.md) | registry |
 | continue | **none** — sets no identity variable | source |
 | github-copilot | `COPILOT_CLI=1` (documented), `COPILOT_AGENT_SESSION_ID`; `AI_AGENT=github-copilot(-cli)` | doc |
 | amp | `AGENT=amp` (reported, unverified) | community |
@@ -81,7 +81,7 @@ Evidence tiers: **probed** (live env snapshot recorded by us) > **source** (read
 | replit | `REPL_ID` (environment marker, not agent-specific) | vercel-rules |
 | devin | file tell only (`/opt/.devin`) — outside the env core, planned for `/node` | vercel-rules |
 
-The no-signal entries (grok, crush, continue; codex under `danger-full-access`) are deliberate: an agent that cannot be detected from env is recorded as such — honesty over reach. Any agent that sets `AI_AGENT` or a name-valued `AGENT` is detected without a registry entry. Coverage caveats (goose's per-path signals, cline's terminal-only marker) live as comments in each detector and in the fixtures.
+The no-signal entries (grok, continue; codex under `danger-full-access`) are deliberate: an agent that cannot be detected from env is recorded as such — honesty over reach. Any agent that sets `AI_AGENT` or a name-valued `AGENT` is detected without a registry entry. Coverage caveats (goose's per-path signals, cline's terminal-only marker) live as comments in each detector and in the fixtures.
 
 ## Design
 

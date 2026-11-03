@@ -1,5 +1,9 @@
 # crush
 
+Reviewed 2026-11-03: the [current producer documentation](https://github.com/charmbracelet/crush/blob/3b1f8604f0027cf5fa47f29a27655ef1aeed8d8f/docs/hooks/README.md) describes CRUSH as an execution sentinel in hook and bash-tool child environments. This supersedes the older no-marker conclusion for the documented paths; it does not imply that older versions or every interface inject it. Non-empty matching remains this detector's heuristic.
+
+## Historical source audit (2026-07-12)
+
 Charm's terminal agent (Go). Source-audited 2026-07-12 — full sweep of
 Setenv / cmd.Env across internal/.
 
