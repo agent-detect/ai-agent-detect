@@ -1,3 +1,4 @@
+import manus from './manus/index.js';
 // One agent = one folder = one easy PR. Keep alphabetical.
 import aider from './aider/index.js';
 import amp from './amp/index.js';
@@ -26,6 +27,7 @@ import replit from './replit/index.js';
 import roo from './roo/index.js';
 
 export const agents = [
+  manus,
   aider,
   amp,
   antigravity,
