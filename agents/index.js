@@ -10,6 +10,7 @@ import continueDev from './continue/index.js';
 import cowork from './cowork/index.js';
 import crush from './crush/index.js';
 import cursor from './cursor/index.js';
+import deepseekHarness from './deepseek-harness/index.js';
 import devin from './devin/index.js';
 import geminiCli from './gemini-cli/index.js';
 import githubCopilot from './github-copilot/index.js';
@@ -51,4 +52,5 @@ export const agents = [
   qwenCode,
   replit,
   roo,
+  deepseekHarness,
 ];
