@@ -103,6 +103,40 @@
           "deepseek-harness"
         ]
       }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: native inner gemini-cli precedes inherited DeepSeek host",
+      "tier": "synthetic",
+      "env": {
+        "DSH_SHELL": "1",
+        "GEMINI_CLI": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "gemini-cli",
+        "claimNames": [
+          "gemini-cli",
+          "deepseek-harness"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: native inner opencode precedes inherited DeepSeek host",
+      "tier": "synthetic",
+      "env": {
+        "DSH_SHELL": "1",
+        "OPENCODE": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "opencode",
+        "claimNames": [
+          "opencode",
+          "deepseek-harness"
+        ]
+      }
     }
   ]
 }

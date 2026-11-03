@@ -38,7 +38,6 @@ export const agents = [
   cowork,
   crush,
   cursor,
-  deepseekHarness,
   devin,
   geminiCli,
   githubCopilot,
@@ -53,4 +52,5 @@ export const agents = [
   qwenCode,
   replit,
   roo,
+  deepseekHarness,
 ];
