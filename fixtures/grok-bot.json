@@ -1,0 +1,372 @@
+{
+  "agent": "grok-bot",
+  "probes": [
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 0",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "SAND_AGENT": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 1",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "SAND_AGENT": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 2",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "SAND_AGENT": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 3",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "SAND_AGENT": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 4",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "SAND_MANIFEST_V2": "1",
+        "SAND_SUPERVISOR_ENABLED": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "cursor",
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 5",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "0",
+        "SAND_MANIFEST_V2": "1",
+        "SAND_SUPERVISOR_ENABLED": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 6",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "false",
+        "SAND_MANIFEST_V2": "1",
+        "SAND_SUPERVISOR_ENABLED": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 7",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": " ",
+        "SAND_MANIFEST_V2": "1",
+        "SAND_SUPERVISOR_ENABLED": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 8",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "SAND_MANIFEST_V2": "0",
+        "SAND_SUPERVISOR_ENABLED": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "cursor",
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 9",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "SAND_MANIFEST_V2": "false",
+        "SAND_SUPERVISOR_ENABLED": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "cursor",
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 10",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "SAND_MANIFEST_V2": " ",
+        "SAND_SUPERVISOR_ENABLED": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "cursor",
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 11",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "SAND_MANIFEST_V2": "1",
+        "SAND_SUPERVISOR_ENABLED": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "cursor",
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 12",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "SAND_MANIFEST_V2": "1",
+        "SAND_SUPERVISOR_ENABLED": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "cursor",
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 13",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "SAND_MANIFEST_V2": "1",
+        "SAND_SUPERVISOR_ENABLED": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "grok-bot",
+        "claimNames": [
+          "cursor",
+          "grok-bot"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 14",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 15",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 16",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "SAND_AGENT": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 17",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "SAND_MANIFEST_V2": "1",
+        "SAND_SUPERVISOR_ENABLED": "1"
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 18",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "",
+        "SAND_MANIFEST_V2": "1",
+        "SAND_SUPERVISOR_ENABLED": "1"
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 19",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "SAND_SUPERVISOR_ENABLED": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "cursor",
+        "claimNames": [
+          "cursor"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 20",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "SAND_MANIFEST_V2": "",
+        "SAND_SUPERVISOR_ENABLED": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "cursor",
+        "claimNames": [
+          "cursor"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 21",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "SAND_MANIFEST_V2": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "cursor",
+        "claimNames": [
+          "cursor"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 22",
+      "tier": "static-distribution (local); reported-shell (cloud)",
+      "env": {
+        "CURSOR_AGENT": "1",
+        "SAND_MANIFEST_V2": "1",
+        "SAND_SUPERVISOR_ENABLED": ""
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "cursor",
+        "claimNames": [
+          "cursor"
+        ]
+      }
+    }
+  ]
+}
