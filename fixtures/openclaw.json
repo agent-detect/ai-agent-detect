@@ -1,0 +1,100 @@
+{
+  "agent": "openclaw",
+  "probes": [
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 0",
+      "tier": "registry",
+      "env": {
+        "OPENCLAW_SHELL": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "openclaw",
+        "claimNames": [
+          "openclaw"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 1",
+      "tier": "registry",
+      "env": {
+        "OPENCLAW_SHELL": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "openclaw",
+        "claimNames": [
+          "openclaw"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 2",
+      "tier": "registry",
+      "env": {
+        "OPENCLAW_SHELL": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "openclaw",
+        "claimNames": [
+          "openclaw"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 3",
+      "tier": "registry",
+      "env": {
+        "OPENCLAW_SHELL": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "openclaw",
+        "claimNames": [
+          "openclaw"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 4",
+      "tier": "registry",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 5",
+      "tier": "registry",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 6",
+      "tier": "registry",
+      "env": {
+        "OPENCLAW_SHELL": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    }
+  ]
+}
