@@ -1,13 +1,11 @@
-# QwenWork detection evidence
+# qwenwork
 
-Investigated while maintaining [Detect Agent](https://github.com/ai-shifu/detect-agent), a community specification with shared synthetic cases. [Pinned rule and evidence record](https://github.com/ai-shifu/detect-agent/blob/c06e732d17d02f74fd9b452f20c4fa17a9f95a03/detect-agent.md).
+Alibaba's AI office platform for completing tasks and delivering documents, spreadsheets, presentations, websites, and other work products. [Official source](https://docs.qwenwork.cn/product-introduction).
 
-Adopted signal: non-empty `QODER_WORK_INTEGRATION_PRODUCT`.
+## Identity signals
+
+- non-empty `QODER_WORK_INTEGRATION_PRODUCT`.
 
 Static inspection of QwenWorkCN 1.3.1 macOS distribution, supplemented by a reported shell. The marker was confirmed on local/host paths, not ordinary VM/QXC guest shells. Its observed product spelling is not a matching restriction. QwenWork and Qwen Code are separate products.
 
-Ordinary markers require a non-empty string without trimming or boolean parsing; exact comparisons and conjunctions are preserved. The upstream claims API reports simultaneous claims; it does not infer nesting.
-
-The test inputs are synthetic. No fresh live vendor session was run for this contribution. Reported or static observations do not establish every build, interface or operating system. Markers can be inherited or set manually and do not authenticate the immediate caller. The normal detection result adds no marker values, credentials, user paths or session identifiers. Existing diagnostic APIs retain their upstream behavior. There is no runtime dependency on Detect Agent or new process-tree probe.
-
-[Official product identity](https://qwenwork.cn/docs/product-introduction) establishes the product name, not an environment-variable contract.
+[Evidence and scope](https://github.com/ai-shifu/detect-agent/blob/8fa5e943e134d97bb92397ca0e0181a8c42f4ec4/detect-agent.md#8-evidence-coverage-and-references).
