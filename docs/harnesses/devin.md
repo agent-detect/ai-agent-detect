@@ -1,11 +1,11 @@
 # devin
 
-Cognition's Devin. Sole tell: file_exists /opt/.devin [vercel-rules] — a DISK check the edge-safe env core cannot make; the detector ships as honest-null with filesTells recorded, detection lands with the /node rung (detectDeep). Closed source. Probe TODO: env snapshot from a Devin machine (someone at Vercel evidently had one).
+Earlier versions recorded only the /opt/.devin filesystem hint, outside the edge-safe environment core. That metadata remains available. The scoped Linux cloud command-tool markers documented below now provide an environment-only path; this does not establish a marker for Devin for Terminal or every Devin interface.
 
 
 ## Additional execution-marker evidence
 
-# Devin detection evidence
+### Devin execution-marker evidence
 
 Investigated while maintaining [Detect Agent](https://github.com/ai-shifu/detect-agent), a community specification with shared synthetic cases. [Pinned rule and evidence record](https://github.com/ai-shifu/detect-agent/blob/c06e732d17d02f74fd9b452f20c4fa17a9f95a03/detect-agent.md).
 
