@@ -1,0 +1,100 @@
+{
+  "agent": "qwenwork",
+  "probes": [
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 0",
+      "tier": "static-distribution / reported-shell",
+      "env": {
+        "QODER_WORK_INTEGRATION_PRODUCT": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "qwenwork",
+        "claimNames": [
+          "qwenwork"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 1",
+      "tier": "static-distribution / reported-shell",
+      "env": {
+        "QODER_WORK_INTEGRATION_PRODUCT": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "qwenwork",
+        "claimNames": [
+          "qwenwork"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 2",
+      "tier": "static-distribution / reported-shell",
+      "env": {
+        "QODER_WORK_INTEGRATION_PRODUCT": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "qwenwork",
+        "claimNames": [
+          "qwenwork"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 3",
+      "tier": "static-distribution / reported-shell",
+      "env": {
+        "QODER_WORK_INTEGRATION_PRODUCT": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "qwenwork",
+        "claimNames": [
+          "qwenwork"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 4",
+      "tier": "static-distribution / reported-shell",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 5",
+      "tier": "static-distribution / reported-shell",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 6",
+      "tier": "static-distribution / reported-shell",
+      "env": {
+        "QODER_WORK_INTEGRATION_PRODUCT": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    }
+  ]
+}
