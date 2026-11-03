@@ -1,0 +1,100 @@
+{
+  "agent": "doubao-work",
+  "probes": [
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 0",
+      "tier": "reported-shell",
+      "env": {
+        "DOUBAO_OFFICE_AGENT_NAME": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "doubao-work",
+        "claimNames": [
+          "doubao-work"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 1",
+      "tier": "reported-shell",
+      "env": {
+        "DOUBAO_OFFICE_AGENT_NAME": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "doubao-work",
+        "claimNames": [
+          "doubao-work"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 2",
+      "tier": "reported-shell",
+      "env": {
+        "DOUBAO_OFFICE_AGENT_NAME": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "doubao-work",
+        "claimNames": [
+          "doubao-work"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 3",
+      "tier": "reported-shell",
+      "env": {
+        "DOUBAO_OFFICE_AGENT_NAME": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "doubao-work",
+        "claimNames": [
+          "doubao-work"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 4",
+      "tier": "reported-shell",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 5",
+      "tier": "reported-shell",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 6",
+      "tier": "reported-shell",
+      "env": {
+        "DOUBAO_OFFICE_AGENT_NAME": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    }
+  ]
+}
