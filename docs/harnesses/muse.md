@@ -1,13 +1,11 @@
-# Muse detection evidence
+# muse
 
-Investigated while maintaining [Detect Agent](https://github.com/ai-shifu/detect-agent), a community specification with shared synthetic cases. [Pinned rule and evidence record](https://github.com/ai-shifu/detect-agent/blob/c06e732d17d02f74fd9b452f20c4fa17a9f95a03/detect-agent.md).
+Meta’s personal AI agent that handles tasks and projects across everyday apps and turns long-term goals into action plans. [Official source](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/).
 
-Adopted signal: non-empty `JARVIS_IS_ASSIGNED` OR non-empty `JARVIS_TOOL_CALL_ID`.
+## Identity signals
+
+- non-empty `JARVIS_IS_ASSIGNED` OR non-empty `JARVIS_TOOL_CALL_ID`.
 
 User-reported command-shell observation on 2026-10-16 for Meta Muse. JARVIS_SESSION_ID alone is not supported. This product is separate from Muse Code/MUSE_RELEASE_INFO.
 
-Ordinary markers require a non-empty string without trimming or boolean parsing; exact comparisons and conjunctions are preserved. The upstream claims API reports simultaneous claims; it does not infer nesting.
-
-The test inputs are synthetic. No fresh live vendor session was run for this contribution. Reported or static observations do not establish every build, interface or operating system. Markers can be inherited or set manually and do not authenticate the immediate caller. The normal detection result adds no marker values, credentials, user paths or session identifiers. Existing diagnostic APIs retain their upstream behavior. There is no runtime dependency on Detect Agent or new process-tree probe.
-
-[Official product identity](https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse) establishes the product name, not an environment-variable contract.
+[Evidence and scope](https://github.com/ai-shifu/detect-agent/blob/8fa5e943e134d97bb92397ca0e0181a8c42f4ec4/detect-agent.md#8-evidence-coverage-and-references).
