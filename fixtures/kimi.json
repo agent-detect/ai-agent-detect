@@ -1,0 +1,113 @@
+{
+  "agent": "kimi",
+  "probes": [
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 0",
+      "tier": "public-source",
+      "env": {
+        "KIMI_PLUGIN_ROOT": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "kimi",
+        "claimNames": [
+          "kimi"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 1",
+      "tier": "public-source",
+      "env": {
+        "KIMI_PLUGIN_ROOT": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "kimi",
+        "claimNames": [
+          "kimi"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 2",
+      "tier": "public-source",
+      "env": {
+        "KIMI_PLUGIN_ROOT": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "kimi",
+        "claimNames": [
+          "kimi"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 3",
+      "tier": "public-source",
+      "env": {
+        "KIMI_PLUGIN_ROOT": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "kimi",
+        "claimNames": [
+          "kimi"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 4",
+      "tier": "public-source",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 5",
+      "tier": "public-source",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 6",
+      "tier": "public-source",
+      "env": {
+        "KIMI_PLUGIN_ROOT": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 7",
+      "tier": "public-source",
+      "env": {
+        "KIMI_CODE_HOME": "synthetic"
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    }
+  ]
+}
