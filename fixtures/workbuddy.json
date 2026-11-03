@@ -1,0 +1,184 @@
+{
+  "agent": "workbuddy",
+  "probes": [
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 0",
+      "tier": "static-distribution",
+      "env": {
+        "WORKBUDDY_APPLICATION_NAME": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "workbuddy",
+        "claimNames": [
+          "workbuddy"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 1",
+      "tier": "static-distribution",
+      "env": {
+        "WORKBUDDY_APPLICATION_NAME": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "workbuddy",
+        "claimNames": [
+          "workbuddy"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 2",
+      "tier": "static-distribution",
+      "env": {
+        "WORKBUDDY_APPLICATION_NAME": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "workbuddy",
+        "claimNames": [
+          "workbuddy"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 3",
+      "tier": "static-distribution",
+      "env": {
+        "WORKBUDDY_APPLICATION_NAME": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "workbuddy",
+        "claimNames": [
+          "workbuddy"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 4",
+      "tier": "static-distribution",
+      "env": {
+        "WORKBUDDY_APP_NAME": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "workbuddy",
+        "claimNames": [
+          "workbuddy"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 5",
+      "tier": "static-distribution",
+      "env": {
+        "WORKBUDDY_APP_NAME": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "workbuddy",
+        "claimNames": [
+          "workbuddy"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 6",
+      "tier": "static-distribution",
+      "env": {
+        "WORKBUDDY_APP_NAME": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "workbuddy",
+        "claimNames": [
+          "workbuddy"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 7",
+      "tier": "static-distribution",
+      "env": {
+        "WORKBUDDY_APP_NAME": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "workbuddy",
+        "claimNames": [
+          "workbuddy"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 8",
+      "tier": "static-distribution",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 9",
+      "tier": "static-distribution",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 10",
+      "tier": "static-distribution",
+      "env": {
+        "WORKBUDDY_APPLICATION_NAME": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 11",
+      "tier": "static-distribution",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 12",
+      "tier": "static-distribution",
+      "env": {
+        "WORKBUDDY_APP_NAME": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    }
+  ]
+}
