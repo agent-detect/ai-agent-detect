@@ -1,0 +1,108 @@
+{
+  "agent": "deepseek-harness",
+  "probes": [
+    {
+      "date": "2026-11-03",
+      "method": "source-derived: published shell environment; synthetic mapping",
+      "tier": "source",
+      "env": {
+        "DSH_SHELL": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "deepseek-harness",
+        "claimNames": [
+          "deepseek-harness"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "source-derived: published shell environment; synthetic mapping",
+      "tier": "source",
+      "env": {
+        "DSH_SHELL": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "deepseek-harness",
+        "claimNames": [
+          "deepseek-harness"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "source-derived: published shell environment; synthetic mapping",
+      "tier": "source",
+      "env": {
+        "DSH_SHELL": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "deepseek-harness",
+        "claimNames": [
+          "deepseek-harness"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "source-derived: published shell environment; synthetic mapping",
+      "tier": "source",
+      "env": {
+        "DSH_SHELL": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "deepseek-harness",
+        "claimNames": [
+          "deepseek-harness"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "source-derived: published shell environment; synthetic mapping",
+      "tier": "source",
+      "env": {
+        "DSH_SHELL": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "configuration-only negative",
+      "tier": "synthetic",
+      "env": {
+        "DSH_HOME": "synthetic"
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: inner Claude and outer DeepSeek claims coexist",
+      "tier": "synthetic",
+      "env": {
+        "DSH_SHELL": "1",
+        "CLAUDECODE": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "claude-code",
+        "claimNames": [
+          "claude-code",
+          "deepseek-harness"
+        ]
+      }
+    }
+  ]
+}
