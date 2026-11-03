@@ -1,0 +1,184 @@
+{
+  "agent": "hermes",
+  "probes": [
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 0",
+      "tier": "public-source / registry",
+      "env": {
+        "HERMES_SESSION_ID": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "hermes",
+        "claimNames": [
+          "hermes"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 1",
+      "tier": "public-source / registry",
+      "env": {
+        "HERMES_SESSION_ID": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "hermes",
+        "claimNames": [
+          "hermes"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 2",
+      "tier": "public-source / registry",
+      "env": {
+        "HERMES_SESSION_ID": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "hermes",
+        "claimNames": [
+          "hermes"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 3",
+      "tier": "public-source / registry",
+      "env": {
+        "HERMES_SESSION_ID": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "hermes",
+        "claimNames": [
+          "hermes"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 4",
+      "tier": "public-source / registry",
+      "env": {
+        "HERMES_AGENT": "1"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "hermes",
+        "claimNames": [
+          "hermes"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 5",
+      "tier": "public-source / registry",
+      "env": {
+        "HERMES_AGENT": "0"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "hermes",
+        "claimNames": [
+          "hermes"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 6",
+      "tier": "public-source / registry",
+      "env": {
+        "HERMES_AGENT": "false"
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "hermes",
+        "claimNames": [
+          "hermes"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: execution marker 7",
+      "tier": "public-source / registry",
+      "env": {
+        "HERMES_AGENT": " "
+      },
+      "expect": {
+        "isAgent": true,
+        "primary": "hermes",
+        "claimNames": [
+          "hermes"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 8",
+      "tier": "public-source / registry",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 9",
+      "tier": "public-source / registry",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 10",
+      "tier": "public-source / registry",
+      "env": {
+        "HERMES_SESSION_ID": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 11",
+      "tier": "public-source / registry",
+      "env": {},
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "method": "synthetic: absent/empty/partial/configuration 12",
+      "tier": "public-source / registry",
+      "env": {
+        "HERMES_AGENT": ""
+      },
+      "expect": {
+        "isAgent": false,
+        "primary": null,
+        "claimNames": []
+      }
+    }
+  ]
+}
