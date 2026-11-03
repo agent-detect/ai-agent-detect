@@ -79,9 +79,9 @@ Evidence tiers: **probed** (live env snapshot recorded by us) > **source** (read
 | kiro | `TERM_PROGRAM~kiro` (low confidence — ambience, not identity) | vercel-rules |
 | pi | PATH contains `.pi/agent` (low confidence) | vercel-rules |
 | replit | `REPL_ID` (environment marker, not agent-specific) | vercel-rules |
-| devin | file tell only (`/opt/.devin`) — outside the env core, planned for `/node` | vercel-rules |
+| devin | execution markers; see [evidence](docs/harnesses/devin.md) | reported-shell |
 
-The no-signal entries (grok, crush, continue; codex under `danger-full-access`) are deliberate: an agent that cannot be detected from env is recorded as such — honesty over reach. Any agent that sets `AI_AGENT` or a name-valued `AGENT` is detected without a registry entry. Coverage caveats (goose's per-path signals, cline's terminal-only marker) live as comments in each detector and in the fixtures.
+The no-signal entries (grok, continue; codex under `danger-full-access`) are deliberate: an agent that cannot be detected from env is recorded as such — honesty over reach. Any agent that sets `AI_AGENT` or a name-valued `AGENT` is detected without a registry entry. Coverage caveats (goose's per-path signals, cline's terminal-only marker) live as comments in each detector and in the fixtures.
 
 ## Design
 

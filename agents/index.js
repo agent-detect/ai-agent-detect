@@ -37,7 +37,6 @@ export const agents = [
   cowork,
   crush,
   cursor,
-  devin,
   geminiCli,
   githubCopilot,
   goose,
@@ -51,4 +50,5 @@ export const agents = [
   qwenCode,
   replit,
   roo,
+  devin,
 ];
